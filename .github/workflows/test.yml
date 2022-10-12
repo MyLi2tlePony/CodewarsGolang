@@ -1,0 +1,28 @@
+name: sql-migrator
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  GO111MODULE: "on"
+
+jobs:
+  tests_by_makefile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: ^1.18
+
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: make lint
+        run: make lint
+
+      - name: make test
+        run: make test
