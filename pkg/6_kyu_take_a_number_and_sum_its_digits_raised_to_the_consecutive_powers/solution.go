@@ -24,11 +24,7 @@ func isEureka(num uint64) bool {
 		result += pow(uint64(digit), i+1)
 	}
 
-	if result == num {
-		return true
-	}
-
-	return false
+	return result == num
 }
 
 func getDigits(num uint64) []uint8 {
