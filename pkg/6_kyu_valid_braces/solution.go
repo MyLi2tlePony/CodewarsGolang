@@ -4,7 +4,7 @@ var braces = map[rune]rune{')': '(', '}': '{', ']': '['}
 
 func solution(str string) bool {
 	bracesCounter := map[rune]int{'(': 0, ')': 0, '[': 0, ']': 0, '{': 0, '}': 0}
-	openedBrace := make([]rune, 0, 0)
+	openedBrace := make([]rune, 0)
 
 	for _, brace := range str {
 		if brace == '(' || brace == '[' || brace == '{' {
