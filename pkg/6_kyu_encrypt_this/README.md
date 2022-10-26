@@ -1,8 +1,17 @@
-Complete the method which returns the number which is most frequent in the given input array. If there is a tie for most frequent number, return the largest number among them.
+Acknowledgments:
+I thank yvonne-liu for the idea and for the example tests :)
 
-Note: no empty arrays will be given.
+Description:
+Encrypt this!
 
-Examples
-[12, 10, 8, 12, 7, 6, 4, 10, 12]              -->  12
-[12, 10, 8, 12, 7, 6, 4, 10, 12, 10]          -->  12
-[12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]  -->   3
+You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:
+
+Your message is a string containing space separated words.
+You need to encrypt each word in the message using the following rules:
+The first letter must be converted to its ASCII code.
+The second letter must be switched with the last letter
+Keepin' it simple: There are no special characters in the input.
+Examples:
+encryptThis "Hello" == "72olle"
+encryptThis "good" == "103doo"
+encryptThis "hello world" == "104olle 119drlo"

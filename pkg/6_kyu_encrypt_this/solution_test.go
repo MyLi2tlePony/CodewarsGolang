@@ -1,4 +1,4 @@
-package highest_rank_number_in_an_array
+package encrypt_this
 
 import (
 	"github.com/stretchr/testify/require"
@@ -7,9 +7,11 @@ import (
 
 func TestSolution(t *testing.T) {
 	t.Run("tests", func(t *testing.T) {
-		require.Equal(t, solution([]int{12, 10, 8, 12, 7, 6, 4, 10, 12}), 12)
-		require.Equal(t, solution([]int{12, 10, 8, 12, 7, 6, 4, 4, 4, 10, 12}), 12)
-		require.Equal(t, solution([]int{12, 10, 8, 12, 7, 6, 4, 10, 12, 10, 10}), 10)
-		require.Equal(t, solution([]int{12, 10, 8, 12, 7, 6, 4, 10, 12, 13, 13, 13}), 13)
+		require.Equal(t, solution(""), "")
+		require.Equal(t, solution("A wise old owl lived in an oak"), "65 119esi 111dl 111lw 108dvei 105n 97n 111ka")
+		require.Equal(t, solution("The more he saw the less he spoke"), "84eh 109ero 104e 115wa 116eh 108sse 104e 115eokp")
+		require.Equal(t, solution("The less he spoke the more he heard"), "84eh 108sse 104e 115eokp 116eh 109ero 104e 104dare")
+		require.Equal(t, solution("Why can we not all be like that wise old bird"), "87yh 99na 119e 110to 97ll 98e 108eki 116tah 119esi 111dl 98dri")
+		require.Equal(t, solution("Thank you Piotr for all your help"), "84kanh 121uo 80roti 102ro 97ll 121ruo 104ple")
 	})
 }
