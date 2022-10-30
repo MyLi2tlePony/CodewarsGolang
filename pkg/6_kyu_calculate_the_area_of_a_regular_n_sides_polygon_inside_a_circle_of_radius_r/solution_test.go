@@ -1,4 +1,4 @@
-package create_phone_number
+package calculate_the_area_of_a_regular_n_sides_polygon_inside_a_circle_of_radius_r
 
 import (
 	"github.com/stretchr/testify/require"
@@ -7,8 +7,8 @@ import (
 
 func TestSolution(t *testing.T) {
 	t.Run("tests", func(t *testing.T) {
-		require.Equal(t, solution([10]uint{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}), "(123) 456-7890")
-		require.Equal(t, solution([10]uint{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}), "(111) 111-1111")
-		require.Equal(t, solution([10]uint{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}), "(000) 000-0000")
+		require.Equal(t, solution(3, 3), 11.691)
+		require.Equal(t, solution(5.8, 7), 92.053)
+		require.Equal(t, solution(4, 5), 38.042)
 	})
 }

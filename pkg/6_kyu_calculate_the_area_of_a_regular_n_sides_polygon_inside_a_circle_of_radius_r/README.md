@@ -1,7 +1,13 @@
-Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+Write the following function:
 
-Example
-createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
-The returned format must be correct in order to complete this challenge.
+func AreaOfPolygonInsideCircle(circleRadius float64, numberOfSides int) float64
+It should calculate the area of a regular polygon of numberOfSides, number-of-sides, or number_of_sides sides inside a circle of radius circleRadius, circle-radius, or circle_radius which passes through all the vertices of the polygon (such circle is called circumscribed circle or circumcircle). The answer should be a number rounded to 3 decimal places.
 
-Don't forget the space after the closing parentheses!
+Input :: Output Examples
+
+AreaOfPolygonInsideCircle(3, 3) // returns 11.691
+
+AreaOfPolygonInsideCircle(5.8, 7) // returns 92.053
+
+AreaOfPolygonInsideCircle(4, 5) // returns 38.042
+Note: if you need to use Pi in your code, use the native value of your language unless stated otherwise.

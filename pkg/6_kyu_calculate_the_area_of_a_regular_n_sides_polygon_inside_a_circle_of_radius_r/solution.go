@@ -1,7 +1,13 @@
-package create_phone_number
+package calculate_the_area_of_a_regular_n_sides_polygon_inside_a_circle_of_radius_r
 
-import "fmt"
+import (
+	"math"
+)
 
-func solution(n [10]uint) string {
-	return fmt.Sprintf("(%d%d%d) %d%d%d-%d%d%d%d", n[0], n[1], n[2], n[3], n[4], n[5], n[6], n[7], n[8], n[9])
+func solution(circleRadius float64, numberOfSides int) float64 {
+	angle := 2 * math.Pi / float64(numberOfSides)
+	angleSin := math.Sin(angle)
+	triangleS := circleRadius * circleRadius * angleSin / 2
+	area := float64(numberOfSides) * triangleS
+	return math.Round(area*1000) / 1000
 }
