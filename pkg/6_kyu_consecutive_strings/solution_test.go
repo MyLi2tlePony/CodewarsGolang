@@ -7,8 +7,16 @@ import (
 
 func TestSolution(t *testing.T) {
 	t.Run("tests", func(t *testing.T) {
-		require.Equal(t, solution([10]uint{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}), "(123) 456-7890")
-		require.Equal(t, solution([10]uint{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}), "(111) 111-1111")
-		require.Equal(t, solution([10]uint{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}), "(000) 000-0000")
+		require.Equal(t, solution([]string{"zone", "abigail", "theta", "form", "libe", "zas"}, 2),
+			"abigailtheta")
+
+		require.Equal(t, solution([]string{"ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"}, 1),
+			"oocccffuucccjjjkkkjyyyeehh")
+
+		require.Equal(t, solution([]string{}, 3),
+			"")
+
+		require.Equal(t, solution([]string{"itvayloxrp", "wkppqsztdkmvcuwvereiupccauycnjutlv", "vweqilsfytihvrzlaodfixoyxvyuyvgpck"}, 2),
+			"wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck")
 	})
 }

@@ -1,7 +1,32 @@
 package create_phone_number
 
-import "fmt"
+func solution(strArr []string, k int) string {
+	if len(strArr) < 1 || len(strArr) < k {
+		return ""
+	}
 
-func solution(n [10]uint) string {
-	return fmt.Sprintf("(%d%d%d) %d%d%d-%d%d%d%d", n[0], n[1], n[2], n[3], n[4], n[5], n[6], n[7], n[8], n[9])
+	bestLen := 0
+	bestLenStartIndex := 0
+
+	for globalIndex := 0; globalIndex <= len(strArr)-k; globalIndex++ {
+		sequencesLen := 0
+
+		for sequenceIndex := 0; sequenceIndex < k; sequenceIndex++ {
+			sequencesLen += len(strArr[globalIndex+sequenceIndex])
+		}
+
+		if bestLen < sequencesLen {
+			bestLen = sequencesLen
+			bestLenStartIndex = globalIndex
+		}
+	}
+
+	resultString := ""
+	bestLenEndIndex := bestLenStartIndex + k
+
+	for ; bestLenStartIndex < bestLenEndIndex && bestLenStartIndex < len(strArr); bestLenStartIndex++ {
+		resultString += strArr[bestLenStartIndex]
+	}
+
+	return resultString
 }
