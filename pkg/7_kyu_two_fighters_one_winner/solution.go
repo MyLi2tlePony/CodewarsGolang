@@ -1,4 +1,4 @@
-package string_ends_with
+package two_fighters_one_winner
 
 type Fighter struct {
 	Name            string
