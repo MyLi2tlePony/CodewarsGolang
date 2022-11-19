@@ -1,5 +1,3 @@
-Return the number (count) of vowels in the given string.
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 
-We will consider a, e, i, o, u as vowels for this Kata (but not y).
-
-The input string will only consist of lower case letters and/or spaces.
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
